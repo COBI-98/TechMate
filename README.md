@@ -32,3 +32,7 @@ Tools & Collaboration
 </pre><div class="zeroclipboard-container position-absolute right-0 top-0">
     <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="* 여기 " tabindex="0" role="button" style="display: none;">
       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+
+## ERD 초안
+
+<img width="1017" alt="erd초안" src="https://user-images.githubusercontent.com/91714677/235320581-6d0ec9e0-f53f-48a3-8bff-a606ba9cccab.png">
