@@ -5,11 +5,11 @@ BE
 - Java
 - Spring Boot, Spring MVC, Spring Data JPA,
 - JPA, Querydsl
-- Junit4
+- Junit5
 
 DevOps
 - Docker
-- MySQL, MariaDB
+- MySQL, MariaDB, H2(test DB)
 
 FE 
 - HTML
