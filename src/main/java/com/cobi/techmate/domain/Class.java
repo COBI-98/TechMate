@@ -32,7 +32,7 @@ public class Class {
   private String content;
 
   @Enumerated(value = EnumType.STRING) // 강의수준
-  @Column(name = "class_ difficulty", nullable = false)
+  @Column(name = "class_difficulty", nullable = false)
   private Difficulty difficulty;
 
   @Enumerated(value = EnumType.STRING) // 강의개설여부

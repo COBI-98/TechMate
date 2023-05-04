@@ -1,4 +1,4 @@
-package com.cobi.techmate.dto;
+package com.cobi.techmate.dto.response;
 
 import com.cobi.techmate.domain.Member;
 import lombok.Getter;

@@ -3,8 +3,8 @@ package com.cobi.techmate.service;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import com.cobi.techmate.dto.MemberResponse;
 import com.cobi.techmate.dto.SignUpRequest;
+import com.cobi.techmate.dto.response.MemberResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

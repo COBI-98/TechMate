@@ -1,5 +1,6 @@
 package com.cobi.techmate.domain;
 
+import com.cobi.techmate.enums.CommunityType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -31,5 +32,5 @@ public class Community {
 
   @Enumerated(value = EnumType.STRING)
   @Column(name = "community_type")
-  private Community community;
+  private CommunityType communityType;
 }
