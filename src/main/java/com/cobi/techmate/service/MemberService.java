@@ -18,14 +18,15 @@ public class MemberService {
 
   // CREATE
   public Long join(final SignUpRequest signUpRequest) {
-    //    validateDuplicateMember(member); // 중복 회원 검증
+    validateDuplicateMember(signUpRequest); // 중복 회원 검증
     //    memberRepository.save(member);
     return memberRepository.save(signUpRequest.toEntity()).getId();
   }
 
-  private void validateDuplicateMember(Member member) {
+  private void validateDuplicateMember(final SignUpRequest signUpRequest) {
     List<Member> findMembers =
-        memberRepository.findByUsername(member.getUsername()); // 멀티쓰레드 상황 고려 (db 유니크제약조건)
+        memberRepository.findByUsername(
+            signUpRequest.toEntity().getUsername()); // 멀티쓰레드 상황 고려 (db 유니크제약조건)
     if (!findMembers.isEmpty()) {
       throw new IllegalStateException("이미 존재하는 회원입니다.");
     }

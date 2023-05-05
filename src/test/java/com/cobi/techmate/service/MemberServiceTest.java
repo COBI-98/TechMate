@@ -2,6 +2,7 @@ package com.cobi.techmate.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.cobi.techmate.dto.SignUpRequest;
 import com.cobi.techmate.dto.response.MemberResponse;
@@ -65,5 +66,23 @@ class MemberServiceTest {
     // then
     assertThatThrownBy(() -> memberService.findById(memberId))
         .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  @DisplayName("회원 username 중복체크")
+  public void joinValidation() throws Exception {
+    // given
+    SignUpRequest signUpRequest = new SignUpRequest("cobi", "cobi@naver.com", "spring!password");
+    memberService.join(signUpRequest);
+
+    // when
+    SignUpRequest signUpRequest2 = new SignUpRequest("cobi", "cobi98@naver.com", "spring!password");
+
+    // then
+    assertThrows(
+        IllegalStateException.class,
+        () -> {
+          memberService.join(signUpRequest2);
+        });
   }
 }
