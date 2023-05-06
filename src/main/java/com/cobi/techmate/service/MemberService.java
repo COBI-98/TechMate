@@ -32,6 +32,13 @@ public class MemberService {
     }
   }
 
+  private void validateDuplicateEmailMember(final SignUpRequest signUpRequest) {
+    Member member =
+        memberRepository
+            .findByEmail(signUpRequest.toEntity().getEmail())
+            .orElseThrow(NoSuchMemberException::new);
+  }
+
   // 회원 조회 READ
   @Transactional(readOnly = true)
   public MemberResponse findById(final Long memberId) {

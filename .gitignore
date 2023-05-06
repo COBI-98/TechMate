@@ -104,3 +104,4 @@ $RECYCLE.BIN/
 *.lnk
 
 ###my file ###
+application-secret.yml
