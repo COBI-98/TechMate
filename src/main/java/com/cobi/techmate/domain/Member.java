@@ -1,7 +1,10 @@
 package com.cobi.techmate.domain;
 
+import com.cobi.techmate.enums.Role;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,10 +30,10 @@ public class Member {
 
   @Column(length = 255, nullable = false)
   private String password;
-  //
-  //  @Enumerated(value = EnumType.STRING)
-  //  @Column(name = "memeber_role", nullable = false)
-  //  private Role role;
+
+  @Enumerated(value = EnumType.STRING)
+  @Column(name = "member_role", nullable = false)
+  private Role role;
 
   //  @Enumerated(value = EnumType.STRING)
   //  @Column(name = "platform", nullable = false)
@@ -45,12 +48,16 @@ public class Member {
     this.username = username;
     this.email = email;
     this.password = password;
-
+    this.role = Role.STUDENT;
     //    this.platform = platform;
     //    this.platformId = platformId;
   }
 
   public void changeUsername(final String username) {
     this.username = username;
+  }
+
+  public boolean checkPassword(String password) {
+    return this.password.equals(password);
   }
 }
