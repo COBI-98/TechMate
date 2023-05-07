@@ -26,7 +26,7 @@ public class MemberApiController {
   public ResponseEntity<Void> createMember(
       @RequestBody @Valid MemberRegisterRequest memberRegisterRequest) {
     Long memberId = memberService.join(memberRegisterRequest.toServiceRequest());
-    return ResponseEntity.created(URI.create("/api/v1/members" + memberId)).build();
+    return ResponseEntity.created(URI.create("/api/v1/members/" + memberId)).build();
   }
 
   @PutMapping("/{memberId}")
