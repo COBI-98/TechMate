@@ -3,6 +3,7 @@ package com.cobi.techmate.service;
 import com.cobi.techmate.domain.Member;
 import com.cobi.techmate.dto.SignUpRequest;
 import com.cobi.techmate.dto.response.MemberResponse;
+import com.cobi.techmate.exception.member.NoSuchMemberException;
 import com.cobi.techmate.repository.MemberRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
