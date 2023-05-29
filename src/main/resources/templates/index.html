@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TechMate</title>
+    <link rel="icon" href="/img/main/fabicon.png" type="image/png" sizes="50x50"/>
+    <link rel="stylesheet" href="/css/global/global.css"/>
+    <link rel="stylesheet" href="/css/main/main.css"/>
+    <link rel="stylesheet" href="/css/header.css"/>
+    <link rel="stylesheet" href="/css/footer.css"/>
+</head>
+<body>
+<header class="header-stage" th:insert="~{fragments/header.html :: header}"></header>
+<div class="wrap main">
+    <section class="content">
+        <section class="container">
+            <!-- 메인 배너 -->
+            <div class="banner">
+                <div>
+                    <img class="right"
+                            src="/img/banner.png"
+                            alt=""/>
+                </div>
+            </div>
+
+            <div class="move-arrow">
+                <!-- 배너의 카운트 -->
+                <span class="banner-count"></span>
+                <!-- 이전 버튼 -->
+                <div class="prev">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="Layer_1"
+                            style="enable-background: new 0 0 512 512"
+                            version="1.1"
+                            viewBox="0 0 512 512"
+                            xml:space="preserve"
+                    >
+                        <polygon
+                                points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "
+                        />
+                    </svg>
+                </div>
+                <!-- 다음 버튼 -->
+                <div class="next">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="Layer_1"
+                            style="enable-background: new 0 0 512 512"
+                            version="1.1"
+                            viewBox="0 0 512 512"
+                            xml:space="preserve"
+                    >
+                        <polygon
+                                points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "
+                        />
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="techMateSearch">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title is-4">성장기회의 평등을 추구합니다</h1>
+                    <div class="search_wrapper">
+                        <input class="input e_search_input" type="text" placeholder="배우고 싶은 지식을 입력해보세요.">
+                        <button class="button e_search_submit">
+                            <span class="icon"><i class="btn-top-search" id="btnTopSearch" name="btnTopSearch"></i></span>
+                        </button>
+                        <div class="search_view_cover e_search_view_cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="identityContainer" class="identityContainer section">
+            <div class="inner">
+                <h3 class="title">TechMate에 오신 것을 환영합니다!</h3>
+                <div class="identityContainer-content">
+                    <div class="titleWrapper">
+                        <div class="biImage">
+                            <img
+                                    src="/img/TechMate_icon.png"
+                                    alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="descWrapper">
+                        <p class="desc">
+                            반갑습니다! IT 강의 웹사이트 TechMate 에 오신 것을 환영합니다.<br>
+                            배우고, 나누고, 성장하세요 <br>
+                        </p>
+                        <br><br>
+                        <p class="guideline">
+                            <em>TechMate</em><br/>
+                            성장기회의 평등을
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-article recommend-sec">
+            <div class="frame-sm frame-slide-overlap">
+                <div
+                        class="bnr-item-container swiper-container swiper-container-initialized swiper-container-horizontal"
+                >
+                    <!-- 최신 구독 리스트 -->
+                    <ul class="bnr-item-list swiperDataContainer swiper-wrapper recentSub" data-index="0" data-limit="2">
+                    </ul>
+                    <!--// grid-area -->
+                    <button class="swiper-button-prev swiper-btn swiper-button-disabled">
+                        <svg viewBox="0 0 512 512">
+                            <polygon
+                                    points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "
+                            ></polygon>
+                        </svg>
+                    </button>
+                    <button class="swiper-button-next swiper-btn">
+                        <svg viewBox="0 0 512 512">
+                            <polygon
+                                    points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "
+                            ></polygon>
+                        </svg>
+                    </button>
+                    <span
+                            class="swiper-notification"
+                            aria-live="assertive"
+                            aria-atomic="true"
+                    ></span>
+                </div>
+            </div>
+        </section>
+        <section class="main-article">
+            <div class="frame-sm time-sales-wrap">
+                <div class="time-sales-container">
+                    <div class="time-sales-title-area">
+                        <h2 class="main-article-tit">
+                            <span>TechMate의 수강평 보러가기</span>
+                        </h2>
+                        <!-- [Dev] 20220419 수정 -->
+                        <p>%% 명이 TechMate와 함께하고있습니다.</p>
+                    </div>
+                    <div class="time-sales-content-area">
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper swiperDataContainer" data-index="0" data-limit="4"></ul>
+                            <button
+                                    class="swiper-button-prev swiper-btn swiper-button-disabled swiper-button-displayCount2"
+                            >
+                                <svg viewBox="0 0 512 512">
+                                    <polygon
+                                            points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "
+                                    ></polygon>
+                                </svg>
+                            </button>
+                            <button
+                                    class="swiper-button-next swiper-btn swiper-button-displayCount2"
+                            >
+                                <svg viewBox="0 0 512 512">
+                                    <polygon
+                                            points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "
+                                    ></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</div>
+<footer class="footer-stage" th:insert="~{fragments/footer.html :: footer}"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/js/main/modal.js"></script>
+<script th:inline="javascript">
+    let recentSub = [[${recent}]];
+    console.log(recentSub);
+    let topSale = [[${topSale}]];
+    console.log(topSale);
+    let donation = [[${donation}]];
+    console.log(donation);
+    let userDetail = [[${userDetail}]];
+    console.log(userDetail);
+    let reviews = [[${reviews}]];
+    console.log(reviews);
+</script>
+<script src="/js/main/main.js"></script>
+<script src="/js/main/banner.js"></script>
+<script src="/js/main/item-swiper.js"></script>
+<script src="/js/main/header.js"></script>
+</html>

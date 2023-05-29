@@ -1,13 +1,137 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="header">
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrinkto-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-  <!-- Custom styles for this template -->
-  <link href="/css/jumbotron-narrow.css" rel="stylesheet">
-  <title>Hello, TechMate!</title>
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/global/global.css"/>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
 </head>
+<body>
+<div th:fragment="header" class="header">
+  <div class="header_inner">
+    <!-- header_logo -->
+    <h1 class="logo">
+      <a href="/main/welfare">
+        <img src="/img/TechMate_icon.png" alt="">
+      </a>
+      <div class="main-swiper-wrap">
+        <a href="/main/welfare" class="fontW500" id="welfare-market">교육</a>
+        <a href="/main/product" class="fontW500" id="product-market">
+          <img src="/img/header/market-img.png" alt="">
+          채용
+        </a>
+      </div>
+    </h1>
+    <!-- header_util -->
+    <div class="util">
+      <ul>
+        <li sec:authorize="!isAuthenticated()"><a href="/login">로그인 / 회원가입</a></li>
+        <li sec:authorize="isAuthenticated()"><a href="/logout">로그아웃</a></li>
+        <li><a href="javascript:void(0)">정보수정</a></li>
+        <li><a href="javascript:void(0)">마이페이지</a></li>
+      </ul>
+    </div>
+    <!-- header_search -->
+    <div class="header-search">
+      <form class="top-search" name="subSearch">
+        <input
+                type="search"
+                class="input-search"
+                autocomplete="off"
+                placeholder="배우고 싶은 지식을 입력해보세요."
+                maxlength="100"
+        />
+
+        <button
+                type="button"
+                class="btn-top-search"
+                id="btnTopSearch"
+                name="btnTopSearch"
+        ></button>
+      </form>
+    </div>
+    <!--  -->
+    <div class="my-menu">
+      <ul>
+        <li>
+          <a sec:authorize="isAuthenticated()" href="/mypage/" class="btn-util-mypage"></a>
+        </li>
+        <li>
+          <a href="javascript:showCartModal()" class="btn-util-productCart" title=""></a>
+        </li>
+      </ul>
+      <div class="productCart-modal" style="display: none">
+        <a href="/order/subscription">
+          <img src="/img/header/sub_cart.png" alt="">
+          <span class="cart-title">구독 장바구니</span>
+        </a>
+        <a href="/order/product">
+          <img src="/img/header/product_cart.png" alt="">
+          <span class="cart-title">상품 장바구니</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="gnb-wrap">
+    <div class="inner">
+      <div class="category-wrap">
+        <a class="btn-menu-all">
+          <span>카테고리</span>
+        </a>
+        <nav id="all-category" class="category-menu">
+          <ul class="cate-dep1" style="display: none" ;>
+            <li>
+              <a href="javascript:void(0)" data-cd1="R254">
+                <i class="ico-cate-gnb">
+                  <img
+                          src="/img/main/food_icon.png"
+                          alt=""
+                  />
+                </i>
+                <span class="menu">신상품</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav id="gnb" class="gnb">
+        <ul>
+          <li class="">
+            <a href="/user-board/recipe-board-list">
+              <span>강의</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/welfare/list">
+              <span>로드맵</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/product/list">
+              <span>멘토링</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/cs/notice">
+              <span>커뮤니티</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/cs/notice">
+              <span fo>TechMate</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/js/main/header.js"></script>
+</html>
