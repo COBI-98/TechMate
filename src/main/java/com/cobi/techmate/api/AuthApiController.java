@@ -1,8 +1,8 @@
 package com.cobi.techmate.api;
 
-import com.cobi.techmate.dto.request.MemberLoginRequest;
-import com.cobi.techmate.dto.response.TokenResponse;
-import com.cobi.techmate.service.AuthService;
+import com.cobi.techmate.service.auth.AuthService;
+import com.cobi.techmate.service.auth.response.TokenResponse;
+import com.cobi.techmate.service.member.MemberLoginRequest;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

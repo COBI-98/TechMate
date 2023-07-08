@@ -4,13 +4,12 @@ import static com.cobi.techmate.DocumentUtils.getRequestPreprocessor;
 import static com.cobi.techmate.DocumentUtils.getRequestSpecification;
 import static com.cobi.techmate.DocumentUtils.getResponsePreprocessor;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.restdocs.restassured3.RestAssuredRestDocumentation.document;
 
 import com.cobi.techmate.AcceptanceTest;
-import com.cobi.techmate.dto.request.MemberLoginRequest;
-import com.cobi.techmate.dto.request.MemberRegisterRequest;
-import com.cobi.techmate.dto.response.TokenResponse;
+import com.cobi.techmate.service.auth.response.TokenResponse;
+import com.cobi.techmate.service.member.MemberLoginRequest;
+import com.cobi.techmate.service.member.MemberRegisterRequest;
 import io.restassured.RestAssured;
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;

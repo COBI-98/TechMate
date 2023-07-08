@@ -1,6 +1,5 @@
 package com.cobi.techmate.exception;
 
-import com.cobi.techmate.dto.ValidatorMessage;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
