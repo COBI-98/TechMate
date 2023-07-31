@@ -1,7 +1,9 @@
 package com.cobi.techmate.service.course.response;
 
+import com.cobi.techmate.domain.course.Course;
 import com.cobi.techmate.domain.course.CourseStatus;
 import com.cobi.techmate.domain.course.Difficulty;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -17,20 +19,33 @@ public class CourseResponse {
 
   private Difficulty difficulty;
 
-  private CourseStatus classStatus;
+  private CourseStatus courseStatus;
 
-  public CourseResponse(
+  @Builder
+  private CourseResponse(
       Long id,
       String courseNumber,
       String title,
       String content,
       Difficulty difficulty,
-      CourseStatus classStatus) {
+      CourseStatus courseStatus) {
     this.id = id;
     this.courseNumber = courseNumber;
     this.title = title;
     this.content = content;
     this.difficulty = difficulty;
-    this.classStatus = classStatus;
+    this.courseStatus = courseStatus;
+  }
+
+  public static CourseResponse of(Course course) {
+
+    return CourseResponse.builder()
+        .id(course.getId())
+        .courseNumber(course.getCourseNumber())
+        .title(course.getTitle())
+        .content(course.getContent())
+        .difficulty(course.getDifficulty())
+        .courseStatus(course.getCourseStatus())
+        .build();
   }
 }
