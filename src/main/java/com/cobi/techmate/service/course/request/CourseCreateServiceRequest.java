@@ -19,7 +19,7 @@ public class CourseCreateServiceRequest {
 
   private Difficulty difficulty;
 
-  private CourseStatus classStatus;
+  private CourseStatus courseStatus;
 
   @Builder
   private CourseCreateServiceRequest(
@@ -27,21 +27,21 @@ public class CourseCreateServiceRequest {
       String title,
       String content,
       Difficulty difficulty,
-      CourseStatus classStatus) {
+      CourseStatus courseStatus) {
     this.courseNumber = courseNumber;
     this.title = title;
     this.content = content;
     this.difficulty = difficulty;
-    this.classStatus = classStatus;
+    this.courseStatus = courseStatus;
   }
 
-  public Course toEntity() {
+  public Course toEntity(String nextCourseNumber) {
     return Course.builder()
-        .courseNumber(courseNumber)
+        .courseNumber(nextCourseNumber)
         .title(title)
         .content(content)
         .difficulty(difficulty)
-        .classStatus(classStatus)
+        .courseStatus(courseStatus)
         .build();
   }
 }

@@ -7,7 +7,7 @@ import static com.cobi.techmate.DocumentUtils.setRequestSpecification;
 import static org.springframework.restdocs.restassured3.RestAssuredRestDocumentation.document;
 import static org.springframework.restdocs.restassured3.RestAssuredRestDocumentation.documentationConfiguration;
 
-import com.cobi.techmate.service.member.MemberRegisterRequest;
+import com.cobi.techmate.service.member.request.MemberRegisterRequest;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.ExtractableResponse;

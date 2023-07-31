@@ -1,8 +1,8 @@
 package com.cobi.techmate.api;
 
-import com.cobi.techmate.service.member.MemberRegisterRequest;
 import com.cobi.techmate.service.member.MemberService;
-import com.cobi.techmate.service.member.MemberUpdateRequest;
+import com.cobi.techmate.service.member.request.MemberRegisterRequest;
+import com.cobi.techmate.service.member.request.MemberUpdateRequest;
 import java.net.URI;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;

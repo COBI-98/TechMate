@@ -21,10 +21,8 @@ public class Course {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "course_id")
   private Long id;
 
-  @Column(name = "course_number")
   private String courseNumber;
 
   @Column(name = "course_title", length = 255, nullable = false)
@@ -39,7 +37,7 @@ public class Course {
 
   @Enumerated(value = EnumType.STRING) // 강의개설여부
   @Column(name = "course_status", nullable = false)
-  private CourseStatus classStatus;
+  private CourseStatus courseStatus;
 
   @Builder
   private Course(
@@ -47,11 +45,11 @@ public class Course {
       String title,
       String content,
       Difficulty difficulty,
-      CourseStatus classStatus) {
+      CourseStatus courseStatus) {
     this.courseNumber = courseNumber;
     this.title = title;
     this.content = content;
     this.difficulty = difficulty;
-    this.classStatus = classStatus;
+    this.courseStatus = courseStatus;
   }
 }

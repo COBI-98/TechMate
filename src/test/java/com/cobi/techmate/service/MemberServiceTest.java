@@ -4,8 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.cobi.techmate.dto.SignUpRequest;
 import com.cobi.techmate.service.member.MemberService;
+import com.cobi.techmate.service.member.request.SignUpRequest;
 import com.cobi.techmate.service.member.response.MemberResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

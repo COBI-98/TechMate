@@ -1,6 +1,5 @@
 package com.cobi.techmate.service.member.request;
 
-import com.cobi.techmate.dto.SignUpRequest;
 import lombok.Getter;
 
 @Getter

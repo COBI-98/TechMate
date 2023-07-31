@@ -8,8 +8,8 @@ import static org.springframework.restdocs.restassured3.RestAssuredRestDocumenta
 
 import com.cobi.techmate.AcceptanceTest;
 import com.cobi.techmate.service.auth.response.TokenResponse;
-import com.cobi.techmate.service.member.MemberLoginRequest;
-import com.cobi.techmate.service.member.MemberRegisterRequest;
+import com.cobi.techmate.service.member.request.MemberLoginRequest;
+import com.cobi.techmate.service.member.request.MemberRegisterRequest;
 import io.restassured.RestAssured;
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;
