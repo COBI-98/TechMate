@@ -35,4 +35,10 @@ Tools & Collaboration
 
 ## ERD 초안
 
-<img width="1017" alt="erd초안" src="https://user-images.githubusercontent.com/91714677/235320581-6d0ec9e0-f53f-48a3-8bff-a606ba9cccab.png">
+<img width="1017" alt="erd초안" src="https://user-images.githubusercontent.com/91714677/235320581-6d0ec9e0-f53f-48a3-8bff-a606ba9cccab.png"></img)
+
+
+## 프로젝트 흐름도
+<p align="center">
+<img width="707" alt="프로젝트 흐름도" src="https://github.com/COBI-98/TechMate/assets/91714677/7e65aa42-d7ea-47c7-bcd6-43aec06ad300"></img>
+</p>
